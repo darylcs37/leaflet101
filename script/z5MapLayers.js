@@ -401,7 +401,7 @@ var BingLayer = L.TileLayer.extend({
 			alert(e.latlng);
 		}
 
-		var map = L.map('map', {contextmenu: true, layers: [lyrstamenToner], contextmenuItems: [
+		var map = L.map('map', {contextmenu: true, layers: [lyrmapBoxBlue], contextmenuItems: [
 			{text: 'Show coordinates',callback: showCoordinates},
 		]}).setView([mapCenterLat, mapCenterLon], mapZoom);
 		//---------------------------------------------------------------------------
