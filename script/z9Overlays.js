@@ -214,6 +214,6 @@
 					"Air - Tracks"            : groupAirDynamic_P,
 
 					"Sea - Port_P"            : markersSeaPort,
-					"Land - OneService_P"     : markersSGOneService,
-					"Land - SG Outline_A"     : lyrgeoSGOutline,
+					"Land - SG OneService"    : markersSGOneService,
+					"Land - SG Outline"       : lyrgeoSGOutline,
 		}
