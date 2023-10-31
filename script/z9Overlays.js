@@ -106,68 +106,47 @@
 
 		//---------------------------------------------------------------------------
 		<!-- URA - Parks & Waterbodies -->
-		var urapwUrl    = '';
+		var uralandlotUrl    = '';
 		if (localMapTile) {
-			urapwUrl  = urlLocal + 'URAMap.sg/Landuse/{z}/{y}/{z}_y{y}_x{x}.jpg';
+			uralandlotUrl  = urlLocal + 'URAMap.sg/Landuse/{z}/{y}/{z}_y{y}_x{x}.jpg';
 		}
 		else {
-			urapwUrl  = 'https://www.ura.gov.sg/ArcGis/rest/services/maps2/MP14_PW_gaz_maps/MapServer/tile/{z}/{y}/{x}';
+			
+			uralandlotUrl  = 'https://www.ura.gov.sg/ArcGis/rest/services/maps2/MP14_PW_gaz_maps/MapServer/tile/{z}/{y}/{x}';
+			uralandlotUrl  = 'https://www.onemap.gov.sg/maps/tiles/LandLot/{z}/{x}/{y}.png';
 		}
 
-		var uraPWAttrib = 'URA.sg - Parks & Waterbodies';
-		var lyrURAPW    = new L.TileLayer(urapwUrl, {minZoom: 12, maxZoom: 17, attribution: uraPWAttrib});
+		var uraLandLotAttrib = 'URA.sg - Landlot';
+		var lyrURALot    = new L.TileLayer(uralandlotUrl, {minZoom: 12, maxZoom: 17, attribution: uraLandLotAttrib});
 		//---------------------------------------------------------------------------
-		<!-- URA - Landed Housing ->
-		var uralhaUrl   = '';
+		<!-- URA - Control Plan ->
+		var uraContolUrl   = '';
 		if (localMapTile) {
-			uralhaUrl = urlLocal + 'URAMap.sg/Landuse/{z}/{y}/{z}_y{y}_x{x}.jpg';
+			uraContolUrl   = urlLocal + 'URAMap.sg/Landuse/{z}/{y}/{z}_y{y}_x{x}.jpg';
 		}
 		else {
-			uralhaUrl = 'https://www.ura.gov.sg/ArcGis/rest/services/maps2/MP14_LHA_gaz_maps/MapServer/tile/{z}/{y}/{x}';
+			uraContolUrl   = 'https://www.ura.gov.sg/ArcGis/rest/services/maps2/MP14_LHA_gaz_maps/MapServer/tile/{z}/{y}/{x}';
+			uraContolUrl   = 'https://maps.ura.gov.sg/arcgis/rest/services/MP19/SDCP_base_gaz/MapServer/tile/{z}/{y}/{x}';
+
 		}
 
-		var uraLHAttrib = 'URA.sg - Landed Housing';
-		var lyrURALHA   = new L.TileLayer(uralhaUrl, {minZoom: 12, maxZoom: 17, attribution: uraLHAttrib});
-
-		//---------------------------------------------------------------------------
-		<!-- URA - Activity -->
-		var uraaguUrl   = '';
-		if (localMapTile) {
-			uraaguUrl = urlLocal + 'URAMap.sg/Landuse/{z}/{y}/{z}_y{y}_x{x}.jpg';
-		}
-		else {
-			uraaguUrl = 'https://www.ura.gov.sg/ArcGis/rest/services/maps2/MP14_AGU_gaz_maps/MapServer/tile/{z}/{y}/{x}';
-		}
-
-		var uraAGUttrib = 'URA.sg - Activity';
-		var lyrURAAGU   = new L.TileLayer(uraaguUrl, {minZoom: 12, maxZoom: 17, attribution: uraAGUttrib});
+		var uraCPLanttrib = 'URA.sg - Control Plan';
+		var lyrURAContol  = new L.TileLayer(uraContolUrl, {minZoom: 12, maxZoom: 17, attribution: uraCPLanttrib});
 
 		//---------------------------------------------------------------------------
-		<!-- URA - Conservation -->
-		var uraconsvUrl   = '';
+		<!-- URA - MasterPlan -->
+		var uraMPlanUrl   = '';
 		if (localMapTile) {
-			uraconsvUrl = urlLocal + 'URAMap.sg/Landuse/{z}/{y}/{z}_y{y}_x{x}.jpg';
+			uraMPlanUrl = urlLocal + 'URAMap.sg/Landuse/{z}/{y}/{z}_y{y}_x{x}.jpg';
 		}
 		else {
-			uraconsvUrl = 'https://www.ura.gov.sg/ArcGis/rest/services/maps2/MP14_SBUD_gaz_maps/MapServer/tile/{z}/{y}/{x}';
+			uraMPlanUrl = 'https://www.ura.gov.sg/ArcGis/rest/services/maps2/MP14_AGU_gaz_maps/MapServer/tile/{z}/{y}/{x}';
+			uraMPlanUrl = 'https://maps.ura.gov.sg/arcgis/rest/services/MP19/Updated_Landuse_gaz/MapServer/tile/{z}/{y}/{x}';
 		}
 
-		var uraConsvttrib  = 'URA.sg - Conversation';
-		var lyrURAConserve = new L.TileLayer(uraconsvUrl, {minZoom: 12, maxZoom: 17, attribution: uraConsvttrib});
+		var uraMPlanttrib = 'URA.sg - MasterPlan';
+		var lyrURAMPlan   = new L.TileLayer(uraMPlanUrl, {minZoom: 12, maxZoom: 17, attribution: uraMPlanttrib});
 
-
-		//---------------------------------------------------------------------------
-		<!-- URA - Height -->
-		var uraheightUrl       = '';
-		if (localMapTile) {
-			uraheightUrl       = urlLocal + 'URAMap.sg/Landuse/{z}/{y}/{z}_y{y}_x{x}.jpg';
-		}
-		else {
-			uraheightUrl       = 'https://www.ura.gov.sg/ArcGis/rest/services/maps2/MP14_BLDG_HT_gaz_maps/MapServer/tile/{z}/{y}/{x}';
-		}
-
-		var uraheightAttrib    = 'URA.sg - Bldg Height';
-		var lyrURAHeight = new L.TileLayer(uraheightUrl, {minZoom: 12, maxZoom: 17, attribution: uraheightAttrib});
 		//---------------------------------------------------------------------------
 		// Strava - Zoom 12 onwards require sign-in
 		var stravaUrl = '';
@@ -195,15 +174,12 @@
 					"OneMap.sg"               : lyrOneMap,
 					"OneMap.sg (Color)"       : lyrOneMapColor,
 					"OneMap.sg (Satellite)"   : lyrOneMapSatellite,
-					"URA - Landuse"           : lyrURALandUse,
-					"URA - Parks & Waterbody" : lyrURAPW,
-					"URA - Land Housing"      : lyrURALHA,
-					"URA - Activity Use"      : lyrURAAGU,
-					"URA - Conservation"      : lyrURAConserve,
-					"URA - Bldg Height"       : lyrURAHeight,
-
+					"URA - MasterPlan (Old)"  : lyrURALandUse,
+					"URA - MasterPlan"        : lyrURAMPlan,
+					"URA - Landlot"           : lyrURALot,
+					"URA - ControlPlan"       : lyrURAContol,
 					"Population Density"      : lyrPopulation,
-          "Strava"                  : lyrStrava,
+					"Strava"                  : lyrStrava,
 
  					"Weather - Cloud"         : lyrweatherCloud,
  					"Weather - Precipitation" : lyrweatherPrecipitation,

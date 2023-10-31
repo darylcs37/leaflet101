@@ -401,7 +401,7 @@ var BingLayer = L.TileLayer.extend({
 			alert(e.latlng);
 		}
 
-		var map = L.map('map', {contextmenu: true, layers: [lyrstamenTonerLite], contextmenuItems: [
+		var map = L.map('map', {contextmenu: true, layers: [lyrOSM], contextmenuItems: [
 			{text: 'Show coordinates',callback: showCoordinates},
 		]}).setView([mapCenterLat, mapCenterLon], mapZoom);
 		//---------------------------------------------------------------------------
@@ -412,8 +412,8 @@ var BingLayer = L.TileLayer.extend({
 					"ArcGIS Topo"       : lyrarcGISTopo,
 					"ArcGIS Ocean"      : lyrarcGISOcean,
 
-          "Bing Aerial"       : lyrBingAerial,
-          "Bing Road"         : lyrBingRoad,
+					"Bing Aerial"       : lyrBingAerial,
+					"Bing Road"         : lyrBingRoad,
 
 					"Mapbox (Blue)"     : lyrmapBoxBlue,
 					"Mapbox Blueprint"  : lyrmapBoxBP,
@@ -422,7 +422,7 @@ var BingLayer = L.TileLayer.extend({
 					"Mapbox Street"     : lyrmapBoxStreet,
 					"Mapbox Street v5"  : lyrmapBoxStreet5,
 
-          "NASA BlueMarble"         : lyrblueMarble,
+					"NASA BlueMarble"         : lyrblueMarble,
 					"Open Street Maps"        : lyrOSM,
 
 					"Stamen Toner"            : lyrstamenToner,
