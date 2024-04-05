@@ -9,7 +9,7 @@
 <![endif]-->
 	<script src="script/leaflet.js" type="text/javascript"></script>
 
-	<!-- -------------------------------------------------------------------- -->
+	<!-- --------------------------------------------------------------------- -->
 	<!-- Right-click Context Menu -->
 	<link rel="stylesheet" href="script/leaflet.contextmenu.css"/>
 	<script src="script/leaflet.contextmenu.js"></script>
@@ -26,33 +26,49 @@
 	<link rel="stylesheet" href="script/MarkerCluster.Default.css" />
 	<script src="script/leaflet.markercluster-src.js"></script>
 
-	<!-- --------------------------------------------------------------------- -->
+	<link rel="stylesheet" href="script/0_Style.css" />
+
 	<!-- Configuration File -->
-	<script src="script/z1Config.js" type="text/javascript"></script>
-	<script src="script/z2Icons.js" type="text/javascript"></script>
+	<script type="text/javascript" src="script/1_Config.js"></script>
 
-	<link rel="stylesheet" href="script/zStyle.css" />
+	<!-- icon markers -->
+	<script type="text/javascript" src="script/2_Icons.js"></script>
 
+	<!-- right-click context menu -->
+	<script type="text/javascript" src="script/5_Rightclick.js"></script>
 </head>
 
 <body>
 
-<!-- navigation bookmarks
+<!-- navigation bookmarks -->
 	<div id='navigation'>
 		Bookmarks &#183
 		<a href='#' data-position='3.44278, 101.92421' data-zoom='4'>Overview (Globe)</a> &#183
 		<a href='#' data-position='0.04690, 107.71827' data-zoom='6'>Overview (SEA)</a> &#183
+
+		<a href='#' data-position='4.71330, 114.67529' data-zoom='10'>Brunei</a> &#183
+		<a href='#' data-position='11.55828, 104.87830' data-zoom='13'>Cambodia</a> &#183
+		<a href='#' data-position='22.27893, 114.17679' data-zoom='13'>	HongKong	</a> &#183
+
+		<a href='#' data-position='-6.23339, 106.86401' data-zoom='10'>Indonesia</a> &#183
+		<a href='#' data-position='2.97596, 102.51068' data-zoom='10'>Malaysia</a> &#183
 		<a href='#' data-position='27.70382, 85.31794' data-zoom='10'>Nepal</a> &#183
 		<a href='#' data-position='-43.53069, 172.64251' data-zoom='13'>New Zealand</a> &#183
+		<a href='#' data-position='14.60520, 121.01733' data-zoom='9'>Philippines</a> &#183
 		<a href='#' data-position='1.35119, 103.81531' data-zoom='12'>Singapore</a> &#183
-
+		<a href='#' data-position='13.71537, 100.54688' data-zoom='10'>Thailand</a> &#183
 	</div>
--->
 
 	<div id="map"></div>
 
 	<!-- basemap layers - baseMaps -->
-	<script type="text/javascript" src="script/z5MapLayers.js"></script>
+	<script type="text/javascript" src="script/3_basemaps_ESRI.js"></script>
+	<script type="text/javascript" src="script/3_basemaps_Google.js"></script>
+	<script type="text/javascript" src="script/3_basemaps_Microsoft.js"></script>
+	<script type="text/javascript" src="script/3_basemaps_OSM.js"></script>
+	<script type="text/javascript" src="script/3_basemaps.js"></script>
+
+
 <script>
 
 		<!-- -------------------------------------------------------------------- -->
@@ -64,7 +80,9 @@
 		var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 		var osm2 = new L.TileLayer(osmUrl, {minZoom: 0, maxZoom: 13, attribution: osmAttrib });
 		var miniMap = new L.Control.MiniMap(osm2, { toggleDisplay: true }).addTo(map);
+
 		<!-- -------------------------------------------------------------------- -->
+
 
 </script>
 </body></html>

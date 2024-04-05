@@ -1,0 +1,178 @@
+	body { margin:0; padding:0; }
+	#map { position:absolute; top:30px; bottom:0; width:100%; }
+
+	#navigation {
+		background : #fff;
+		position   : absolute;
+		top        : 0;
+		right      : 0;
+		left       : 0;
+		bottom     : 0;
+		width      : 95%;
+		height     : 30px;
+		padding    : 3px;
+		font-family : "dejavu sans","arial",sans-Serif;
+	}
+
+	#navigation a {
+		display : block;
+	}
+
+	#info {
+		position    : absolute; top: 0; right: 0;
+		bottom      : 0; width: 260px; background:#333; color: #fff;
+		padding     : 20px;
+		font-family : "dejavu sans","arial",sans-Serif;
+		font-size   : 82%;
+	}
+
+	.popup {
+	    text-align: center;
+	}
+	.popup .slideshow {
+	    width: 100%;
+	}
+	.popup .slideshow .image {
+	    display: none;
+	}
+	.popup .slideshow .active {
+	    display: block;
+	}
+	.popup .slideshow img {
+	    width: 100%;
+	}
+	.popup .slideshow .caption {
+	    background: #eee;
+	    padding: 8px;
+	}
+	.popup .cycle {
+	    height: 30px;
+	    margin-top: 5px;
+	    padding-top: 5px;
+	}
+	.popup .cycle a.prev {
+	    float: left;
+	}
+	.popup .cycle a.next {
+	    float: right;
+	}
+
+	.placeMarks-label {
+		-moz-box-shadow: none;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		color: #fff;
+		position:relative;
+		font-family : "dejavu sans","arial",sans-Serif;
+		font-size   : 100%;
+	}
+
+	.placeMarks-label-black {
+		-moz-box-shadow: none;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		color: #000;
+		position:relative;
+		font-family : "dejavu sans","arial",sans-Serif;
+		font-size   : 100%;
+	}
+
+	#data_source {
+		background  : #fff;
+		position    : absolute;
+		top         : 500;
+		right       : 0;
+		bottom      : 0;
+		width       : 100%;
+		height      : 60px;
+		text-align  : left;
+		font-family : arial;
+		font-size   : 35px;
+		color       : #ffffff;
+		background-color : #292929;
+	}
+
+	/* for PDC icons - STORM SEVERITY */
+	.roundBlue {
+		/* Safari 3-4, iOS 1-3.2, Android 1.6- */
+		-webkit-border-radius: 12px;
+
+		/* Firefox 1-3.6 */
+		-moz-border-radius: 12px;
+
+		/* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+		border-radius: 18px;
+		border: 3px solid #045fb4;
+	}
+
+	.roundGreen {
+		/* Safari 3-4, iOS 1-3.2, Android 1.6- */
+		-webkit-border-radius: 12px;
+
+		/* Firefox 1-3.6 */
+		-moz-border-radius: 12px;
+
+		/* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+		border-radius: 18px;
+		border: 3px solid #04b45f;
+	}
+
+	.roundRed {
+		/* Safari 3-4, iOS 1-3.2, Android 1.6- */
+		-webkit-border-radius: 12px;
+
+		/* Firefox 1-3.6 */
+		-moz-border-radius: 12px;
+
+		/* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+		border-radius: 18px;
+		border: 3px solid #ff3344;
+	}
+
+	.roundYellow {
+		/* Safari 3-4, iOS 1-3.2, Android 1.6- */
+		-webkit-border-radius: 12px;
+
+		/* Firefox 1-3.6 */
+		-moz-border-radius: 12px;
+
+		/* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+		border-radius: 18px;
+		border: 3px solid #facc2e;
+	}
+
+	#image_logo_bottom_left {
+		position : fixed;
+		bottom   : 0px;
+		left     : 0px;
+		z-index  : 1;
+		padding  : 0px;
+		margin   : 0px;
+	}
+
+	#image_logo_bottom_right {
+		position : fixed;
+		bottom   : 0px;
+		right    : 0px;
+		z-index  : 1;
+		padding  : 0px;
+		margin   : 0px;
+	}
+
+
+// alternating TABLE colors
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th,
+td {
+	padding: 0.25rem;
+	text-align: left;
+	border: 1px solid #ccc;
+}
+
+tbody tr:nth-child(even) {
+	background: #fff7e6;
+}
