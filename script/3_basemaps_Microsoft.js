@@ -67,7 +67,17 @@
   }
   var bingRoadAttrib = 'Microsoft Bing Road';
   var lyrBingRoad = new BingLayer(bingRoadUrl, {subdomains: ['0', '1', '2', '3', '4'], attribution: bingRoadAttrib});
-
+	//---------------------------------------------------------------------------
+	// Bing Road (with names)
+	var bingRoadNameUrl = '';
+	if (localMapTile) {
+		bingRoadNameUrl = urlLocal + 'Bing_Road/{z}/{y}/{z}_y{y}_x{x}.jpg';
+	}
+	else {
+		bingRoadNameUrl = 'http://ak.dynamic.t2.tiles.virtualearth.net/comp/ch/{q}?mkt=en-us&it=G,VE,BX,L,LA&shading=hill&og=88&n=z';
+	}
+	var bingRoadNamesAttrib = 'Microsoft Bing Road (with Road Names)';
+	var lyrBingRoad_WithName = new BingLayer(bingRoadNameUrl, {subdomains: ['0', '1', '2', '3', '4'], attribution: bingRoadNamesAttrib});
   //---------------------------------------------------------------------------
   // Bing DarkRoad (Dark)
   var bingRoadDarkUrl = '';

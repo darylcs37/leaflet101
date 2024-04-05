@@ -44,6 +44,7 @@
 
 					"Bing Aerial"       : lyrBingAerial,
 					"Bing Road"         : lyrBingRoad,
+					"Bing Road (Names)" : lyrBingRoad_WithName,
 					"Bing Road (Dark)"  : lyrBingDarkRoad,
 
 					"GoogleMap Aerial"  : lyrgmAerial,
